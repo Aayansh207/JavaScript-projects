@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="nav-list">
+            <li class="nav-item heading">Kanban Board</li>
+            <li class="nav-item right">
+                <div class="add-button">Add new task</div>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="column todo " data-list="to_do">
+            <div class="head-bar">
+                <h2>To Do</h2>
+                <h2 class="task-count">0</h2>
+            </div>
+            <div class="task-list"></div>
+        </div>
+        <div class="column in-progress" data-list="in_progress">
+            <div class="head-bar">
+                <h2>In Progress</h2>
+                <h2 class="task-count">0</h2>
+            </div>
+            <div class="task-list"></div>
+        </div>
+        <div class="column done" data-list="done">
+            <div class="head-bar">
+                <h2>Done</h2>
+                <h2 class="task-count">0</h2>
+            </div>
+            <div class="task-list"></div>
+        </div>
+    </div>
+    <div class="modal-overlay hidden">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Add Task</h2>
+                <button class="close-modal">X</button>
+            </div>
+            <input type="text" class="task-head-input" placeholder="Task title">
+            <textarea class="task-desc-input" placeholder="Task description"></textarea>
+            <button class="submit-button create-task">Create</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

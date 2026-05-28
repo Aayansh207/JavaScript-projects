@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-page">
+        <div class="left-canvas">
+            <div class="header">
+                <input type="file" id="upload" accept="image/*" hidden>
+                <label for="upload" class="btn upload-btn">Upload Image</label>
+                <button class="btn reset-btn">Reset</button>
+                <button class="btn download-btn">Download</button>
+            </div>
+            <div class="canvas-container">
+                <canvas id="canvas" width="800" height="600"></canvas>
+            </div>
+        </div>
+        <div class="right-tools">
+            <h1>Filters</h1>
+            <div class="filters">
+                <div class="filter" data-filter="brightness">
+                    <div class="filter-head">
+                        <span class="filter-name">Brightness</span>
+                        <span class="filter-value">100%</span>
+                    </div>
+                    <input type="range" min="0" max="200" value="100">
+                </div>
+                <div class="filter" data-filter="contrast">
+                    <div class="filter-head">
+                        <span class="filter-name">Contrast</span>
+                        <span class="filter-value">100%</span>
+                    </div>
+                    <input type="range" min="0" max="200" value="100">
+                </div>
+                <div class="filter" data-filter="saturation">
+                    <div class="filter-head">
+                        <span class="filter-name">Saturation</span>
+                        <span class="filter-value">100%</span>
+                    </div>
+                    <input type="range" min="0" max="200" value="100">
+                </div>
+                <div class="filter" data-filter="hue-rotation">
+                    <div class="filter-head">
+                        <span class="filter-name">Hue Rotation</span>
+                        <span class="filter-value">0°</span>
+                    </div>
+                    <input type="range" min="0" max="360" value="0">
+                </div>
+                <div class="filter" data-filter="blur">
+                    <div class="filter-head">
+                        <span class="filter-name">Blur</span>
+                        <span class="filter-value">0px</span>
+                    </div>
+                    <input type="range" min="0" max="10" value="0">
+                </div>
+                <div class="filter" data-filter="grayscale">
+                    <div class="filter-head">
+                        <span class="filter-name">Grayscale</span>
+                        <span class="filter-value">0%</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="0">
+                </div>
+                <div class="filter" data-filter="sepia">
+                    <div class="filter-head">
+                        <span class="filter-name">Sepia</span>
+                        <span class="filter-value">0%</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="0">
+                </div>
+                <div class="filter" data-filter="opacity">
+                    <div class="filter-head">
+                        <span class="filter-name">Opacity</span>
+                        <span class="filter-value">100%</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="100">
+                </div>
+                <div class="filter" data-filter="invert">
+                    <div class="filter-head">
+                        <span class="filter-name">Invert</span>
+                        <span class="filter-value">0%</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="0">
+                </div>
+            </div>
+            <div class="preset">
+                <h1>Presets</h1>
+                <button class="preset-btn" data-preset="Drama">Drama</button>
+                <button class="preset-btn" data-preset="vintage">Vintage</button>
+                <button class="preset-btn" data-preset="oldSchool">oldSchool</button>
+                <button class="preset-btn" data-preset="CyberPunk">CyberPunk</button>
+                <button class="preset-btn" data-preset="softglow">Soft Glow</button>
+                <button class="preset-btn" data-preset="noir">Noir</button>
+                <button class="preset-btn" data-preset="sunset">Sunset</button>
+                <button class="preset-btn" data-preset="coolTone">coolTone</button>
+                <button class="preset-btn" data-preset="faded">faded</button>
+                <button class="preset-btn" data-preset="retroPop">retroPop</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
