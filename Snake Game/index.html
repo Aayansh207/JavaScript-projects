@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        .header {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+        }
+
+        .Game-Canvas {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Main-Game p-8 bg-black text-white h-100% min-h-screen flex flex-col">
+        <div class="header flex justify-between items-center mb-4 text-2xl">
+            <div class="high-score border-2 border-white p-4 rounded flex items-center gap-2">
+                <div class="high-score-label">High Score :</div>
+                <div class="high-score-value">0</div>
+            </div>
+            <div class="score border-2 border-white p-4 rounded flex items-center gap-2">
+                <div class="score-label">Score :</div>
+                <div class="score-value">0</div>
+            </div>
+            <div class="time border-2 border-white p-4 rounded flex items-center gap-2">
+                <div class="time-label">Time :</div>
+                <div class="time-value">0-00</div>
+            </div>
+        </div>
+        <div class="Game-Canvas">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
